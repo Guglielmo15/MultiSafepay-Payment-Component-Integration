@@ -67,7 +67,7 @@ fetch('https://testapi.multisafepay.com/v1/json/auth/api_token?api_key=' + api_k
 				seconds_active: 2592000,
 				type: 'direct',
 				payment_data: payload,
-				order_id: 'testpaycomp6',
+				order_id: 'YOUR_ORDER_ID',
 				currency: 'EUR',
 				amount: 2000,
 				description: 'Test order payment component'
