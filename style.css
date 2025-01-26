@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo {
+	width: 300px;
+	height: 80px;
+	margin-top: 20px;
+	background-image: url("msp.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.paymentComp {
+	margin-top: 30px;
+}
+
+.buttons {
+	margin-top: 20px;
+}
+
+.payBtnCont {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
