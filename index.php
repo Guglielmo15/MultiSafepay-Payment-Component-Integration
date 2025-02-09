@@ -24,6 +24,9 @@
 			<button type="button" class="btn btn-primary" id="single-btn">Single Payment Method</button> &nbsp; &nbsp;
 			<button type="button" class="btn btn-primary" id="multiple-btn">Multiple Payment Method</button>
 		</div>
+		<div class="buttons">
+			<div id="paypal-button-container"></div>
+		</div>
 		<div id="single">
 			<div class="paymentComp" id="MultiSafepayPayment"></div>
 			<div class="payBtnCont">

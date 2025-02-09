@@ -1,4 +1,36 @@
-api_key = 'YOUR_MULTISAFEPAY_APIKEY';
+const clientId = "YOUR_PAYPAL_CLIENTID";
+const merchantId = "YOUR_PAYPAL_MERCHANTID";
+const api_key = 'YOUR_MULTISAFEPAY_APIKEY';
+
+function loadPayPalSDK(clientId, merchantId) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&merchant-id=${merchantId}`;
+        script.async = true;
+        script.onload = function () {
+            console.log("PayPal SDK loaded successfully!");
+            resolve();
+        };
+        script.onerror = function () {
+            console.error("Failed to load PayPal SDK");
+            reject();
+        };
+        document.head.appendChild(script);
+    });
+}
+
+loadPayPalSDK(clientId, merchantId).then(() => {
+    paypal.Buttons({
+        style: {
+            layout: "vertical",
+            color: "blue",
+            shape: "rect",
+            label: "paypal"
+        }
+    }).render("#paypal-button-container");
+}).catch(() => {
+    console.error("Error loading PayPal Smart Button");
+});
 
 $("#single").hide();
 $("#multiple").hide();
